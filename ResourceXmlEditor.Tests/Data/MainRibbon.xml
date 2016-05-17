@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab id="PresentationAssistant" label="Presentation-Assistent" insertAfterMso="TabHome" keytip="PP">
+        <group id="CreateGroup" label="Create">
+          <button imageMso="FileNewDefault" id="CreateNewCommand" label="New" supertip="Create a new presentation." visible="true" onAction="RibbonControl_Click" size="large" />
+          <button idMso="HeaderFooterInsert" size="large" />
+          <dynamicMenu id="TitleImageCategories" label="Title Image" screentip="Choose Title Image" supertip="Select an title image for a category, to change the title image of your presentation."  imageMso="ObjectPictureFill" size="large" getContent="RibbonMenu_GetContent" />
+        </group>
+        <group idMso="GroupSlides"/>
+        <group id="InsertGroup" label="Insert">
+          <button idMso="PasteTextOnly" size="large" />
+          <gallery idMso="ShapesInsertGallery" size="large" />
+          <button idMso="ChartInsert" size="large" />
+        </group>
+        <group id="GroupAgenda" label="Chapter">
+          <button id="UpdateAgendaCommand" label="Refresh" supertip="Refresh all chapters." size="normal"  onAction="RibbonControl_Click" imageMso="ChartRefresh" />
+          <button id="RenameAgendaCommand" label="Rename" supertip="Rename a chapter." size="normal" onAction="RibbonControl_Click" imageMso="SectionRename" />
+          <button id="RemoveAgendaCommand" label="Delete" supertip="Delete chapter from presentation." size="normal" onAction="RibbonControl_Click" imageMso="SectionRemoveAll" />
+        </group>
+        <group id="GroupColorize" label="Colors">
+          <gallery id="PickFontColor" getImage="RibbonGallery_SelectedImage" label="Font" columns="9" screentip="Choose font color." onAction="RibbonGallery_SelectItem" getItemCount="RibbonGallery_ItemCount" getItemID="RibbonGallery_ItemId" getItemLabel="RibbonGallery_ItemLabel" getItemImage="RibbonGallery_ItemImage" showItemImage="true" showItemLabel="false" getSelectedItemIndex="RibbonControl_SelectedItemIndex" />
+          <gallery id="PickFillColor" getImage="RibbonGallery_SelectedImage" label="Fillcolor" columns="9" screentip="Choose fill color." onAction="RibbonGallery_SelectItem" getItemCount="RibbonGallery_ItemCount" getItemID="RibbonGallery_ItemId" getItemLabel="RibbonGallery_ItemLabel" getItemImage="RibbonGallery_ItemImage" showItemImage="true" showItemLabel="false" getSelectedItemIndex="RibbonControl_SelectedItemIndex" />
+          <gallery id="PickOutlineColor" columns="9" label="Lines" screentip="Lines" supertip="Choose a color for the selected objects border."  onAction="RibbonGallery_SelectItem" getItemCount="RibbonGallery_ItemCount" getItemID="RibbonGallery_ItemId" getItemLabel="RibbonGallery_ItemLabel" getItemImage="RibbonGallery_ItemImage" showItemImage="true" showItemLabel="false" getSelectedItemIndex="RibbonControl_SelectedItemIndex" getImage="RibbonGallery_SelectedImage">
+            <button idMso="TextOutlineMoreLinesDialog" />
+          </gallery>
+        </group>
+        <group id="PrintGroup" label="Print">
+          <toggleButton id="TogglePrintCommand" label="Print" supertip="Prepare presentation for printing." size="large" onAction="RibbonControl_ToggleClick" imageMso="FilePrintPreview" getPressed="RibbonControl_GetPressed"  getEnabled="RibbonControl_GetEnabled" />
+        </group>
+        <group id="InfoGroup" label="Info" keytip="I">
+          <button id="HelpCommand" label="Help" supertip="Help for Presentation-Assistent." onAction="RibbonControl_Click" keytip="IH" imageMso="Help"   />
+          <dialogBoxLauncher>
+            <button id="InfoCommand" screentip="About" supertip="Informationen about Presentation-Assistent Add-In." onAction="RibbonControl_Click" />
+          </dialogBoxLauncher>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
