@@ -8,11 +8,11 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ResourceXmlEditor")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ResourceXmlEditor")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("COC AG")]
 [assembly: AssemblyProduct("ResourceXmlEditor")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright © 2016 Thorsten Dörfler (COC AG)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
